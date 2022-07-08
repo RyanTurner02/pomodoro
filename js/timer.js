@@ -11,18 +11,25 @@ let initialSeconds = 1500; // 25 minutes
 let seconds = 1500; // 25 minutes
 let timer;
 
+let timerHasStarted = false;
+
 function startButtonClicked() {
-    timer = setInterval(countDown, 1000);
+    if (!timerHasStarted) {
+        timer = setInterval(countDown, 1000);
+        timerHasStarted = true;
+    }
 }
 
 function stopButtonClicked() {
     clearInterval(timer);
+    timerHasStarted = false;
 }
 
 function resetButtonClicked() {
     seconds = initialSeconds;
     updateTimerText(getConvertedTime(seconds));
     clearInterval(timer);
+    timerHasStarted = false;
 }
 
 function changeTime(newSeconds) {
@@ -34,6 +41,7 @@ function changeTime(newSeconds) {
 function countDown() {
     if (seconds-- <= 0) {
         clearInterval(timer);
+        timerHasStarted = false;
         return;
     }
     updateTimerText(getConvertedTime(seconds));
