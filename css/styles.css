@@ -74,3 +74,9 @@
 #reset-button {
     background-color: darkslategray;
 }
+
+#timer {
+    font-size: 500%;
+    text-align: center;
+    margin-bottom: 2.5%;
+}
