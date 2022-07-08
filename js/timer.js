@@ -1,7 +1,7 @@
 
-document.getElementById("pomodoro-button").onclick = function () { changeTime(1500) }; // 25 minutes
-document.getElementById("short-break-button").onclick = function () { changeTime(300) }; // 5 minutes
-document.getElementById("long-break-button").onclick = function () { changeTime(600) }; // 10 minutes
+document.getElementById("pomodoro-button").onclick = function () { changeTime(1500); stopButtonClicked(); }; // 25 minutes
+document.getElementById("short-break-button").onclick = function () { changeTime(300); stopButtonClicked(); }; // 5 minutes
+document.getElementById("long-break-button").onclick = function () { changeTime(600); stopButtonClicked(); }; // 10 minutes
 
 document.getElementById("start-button").onclick = function () { startButtonClicked() };
 document.getElementById("stop-button").onclick = function () { stopButtonClicked() };
