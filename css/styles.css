@@ -1,0 +1,69 @@
+.header {
+    display: flex;
+    background-color: #F2F2F2;
+    min-height: 100px;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 2.5%;
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#pomodoro-buttons,
+#control-buttons {
+    display: flex;
+    justify-content: center;
+}
+
+#pomodoro-buttons button,
+#control-buttons button {
+    border-radius: 5px;
+    border-width: 1px;
+}
+
+#pomodoro-buttons {
+    margin-bottom: 2.5%;
+}
+
+#pomodoro-buttons button {
+    color: white;
+    background-color: #2BA6CB;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+#control-buttons button {
+    color: white;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+#start-button,
+#stop-button {
+    margin-right: 2.5%;
+}
+
+#stop-button,
+#reset-button {
+    margin-left: 2.5%;
+}
+
+#start-button {
+    background-color: forestgreen;
+}
+
+#stop-button {
+    background-color: red;
+}
+
+#reset-button {
+    background-color: darkslategray;
+}
