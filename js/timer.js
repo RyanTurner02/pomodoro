@@ -13,6 +13,8 @@ let timer;
 
 let timerHasStarted = false;
 
+let finishedAlarm = new Audio("../audio/alarm_clock.ogg");
+
 function startButtonClicked() {
     if (!timerHasStarted) {
         timer = setInterval(countDown, 1000);
@@ -40,6 +42,7 @@ function changeTime(newSeconds) {
 
 function countDown() {
     if (seconds-- <= 0) {
+        finishedAlarm.play();
         clearInterval(timer);
         timerHasStarted = false;
         return;
