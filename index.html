@@ -6,11 +6,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pomodoro Timer</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="img/tomato.png">
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    
+    <div class="container">
+        <div class="header">
+            <h1 id="title">Pomodoro</h1>
+            <a href="https://github.com/RyanTurner02/pomodoro">
+                <img src="img/GitHub-Mark-32px.png" alt="GitHub" />
+            </a>
+        </div>
+
+        <div class="body">
+            <div id="pomodoro-buttons">
+                <button type="button" id="pomodoro-button">Pomodoro</button>
+                <button type="button" id="short-break-button">Short Break</button>
+                <button type="button" id="long-break-button">Long Break</button>
+            </div>
+
+            <div id="timer">25:00</div>
+
+            <div id="control-buttons">
+                <button type="button" class="button" id="start-button">Start</button>
+                <button type="button" class="button" id="stop-button">Stop</button>
+                <button type="button" class="button" id="reset-button">Reset</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/timer.js"></script>
 </body>
 
 </html>
