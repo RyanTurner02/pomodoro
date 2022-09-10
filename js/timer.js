@@ -1,7 +1,7 @@
 
-document.getElementById("pomodoro-button").onclick = function () { changeTime(1500); stopButtonClicked(); }; // 25 minutes
-document.getElementById("short-break-button").onclick = function () { changeTime(300); stopButtonClicked(); }; // 5 minutes
-document.getElementById("long-break-button").onclick = function () { changeTime(600); stopButtonClicked(); }; // 10 minutes
+document.getElementById("pomodoro-button").onclick = function () { resetTitleText(); changeTime(1500); stopButtonClicked(); }; // 25 minutes
+document.getElementById("short-break-button").onclick = function () { resetTitleText(); changeTime(300); stopButtonClicked(); }; // 5 minutes
+document.getElementById("long-break-button").onclick = function () { resetTitleText(); changeTime(600); stopButtonClicked(); }; // 10 minutes
 
 document.getElementById("start-button").onclick = function () { startButtonClicked() };
 document.getElementById("stop-button").onclick = function () { stopButtonClicked() };
@@ -16,6 +16,10 @@ let timerHasStarted = false;
 let finishedAlarm = new Audio("../audio/alarm_clock.ogg");
 
 function startButtonClicked() {
+    if (seconds <= 0) {
+        return;
+    }
+
     if (!timerHasStarted) {
         timer = setInterval(countDown, 1000);
         timerHasStarted = true;
@@ -30,6 +34,7 @@ function stopButtonClicked() {
 function resetButtonClicked() {
     seconds = initialSeconds;
     updateTimerText(getConvertedTime(seconds));
+    resetTitleText();
     clearInterval(timer);
     timerHasStarted = false;
 }
@@ -48,6 +53,7 @@ function countDown() {
         return;
     }
     updateTimerText(getConvertedTime(seconds));
+    updateTitleText(getConvertedTime(seconds));
 }
 
 function getConvertedTime(totalSeconds) {
@@ -62,4 +68,12 @@ function getConvertedTime(totalSeconds) {
 
 function updateTimerText(newTime) {
     document.getElementById("timer").innerText = newTime;
+}
+
+function resetTitleText() {
+    document.title = "Pomodoro Timer";
+}
+
+function updateTitleText(newTime) {
+    document.title = `(${newTime})` + " - Pomodoro Timer";
 }
