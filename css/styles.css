@@ -4,9 +4,13 @@
     font-family: 'Poppins', sans-serif;
 }
 
+body {
+    background-color: #EFF1F5;
+}
+
 .header {
     display: flex;
-    background-color: #F2F2F2;
+    background-color: #FAFAFA;
     min-height: 100px;
     justify-content: space-evenly;
     align-items: center;
@@ -50,8 +54,8 @@
 }
 
 #pomodoro-buttons button {
-    color: white;
-    background-color: #2BA6CB;
+    color: #FAFAFA;
+    background-color: #04A5E5;
     padding-top: 0.5%;
     padding-bottom: 0.5%;
     padding-left: 5%;
@@ -59,7 +63,7 @@
 }
 
 #control-buttons button {
-    color: white;
+    color: #FAFAFA;
     padding-top: 0.5%;
     padding-bottom: 0.5%;
     padding-left: 2%;
@@ -77,15 +81,15 @@
 }
 
 #start-button {
-    background-color: forestgreen;
+    background-color: #40A02B;
 }
 
 #stop-button {
-    background-color: red;
+    background-color: #FE640B;
 }
 
 #reset-button {
-    background-color: darkslategray;
+    background-color: #8839EF;
 }
 
 #timer {
