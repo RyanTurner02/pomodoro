@@ -81,6 +81,28 @@ function updateTitleText(newTime) {
 let darkModeButton = document.getElementById("mode-toggler");
 darkModeButton.addEventListener("click", toggleDarkMode);
 
+let darkModeEnabled = false;
+
 function toggleDarkMode(event) {
     document.body.classList.toggle("dark-mode");
+
+    if(!darkModeEnabled) {
+        darkModeEnabled = true;
+    } else {
+        darkModeEnabled = false;
+    }
+
+    let githubLogo = document.getElementById("github-logo");
+    toggleImage(githubLogo, "img/GitHub-Mark-Light-32px.png", "img/GitHub-Mark-32px.png");
+
+    let darkModeButtonImage = darkModeButton.querySelector("img");
+    toggleImage(darkModeButtonImage, "img/sun.svg", "img/moon.svg");
+}
+
+function toggleImage(img, darkModeSrc, lightModeSrc) {
+    if(darkModeEnabled) {
+        img.src = darkModeSrc;
+    } else {
+        img.src = lightModeSrc;
+    }
 }
