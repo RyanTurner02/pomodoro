@@ -77,3 +77,10 @@ function resetTitleText() {
 function updateTitleText(newTime) {
     document.title = `(${newTime})` + " - Pomodoro Timer";
 }
+
+let darkModeButton = document.getElementById("mode-toggler");
+darkModeButton.addEventListener("click", toggleDarkMode);
+
+function toggleDarkMode(event) {
+    document.body.classList.toggle("dark-mode");
+}

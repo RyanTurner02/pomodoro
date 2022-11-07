@@ -22,7 +22,7 @@
     display: flex;
 }
 
-.mode-toggler {
+#mode-toggler {
     margin-left: 10px;
     border: none;
 }
@@ -96,4 +96,34 @@
 
 button {
     cursor: pointer;
+}
+
+.dark-mode {
+    color: #FAFAFA;
+    background-color: #1E1E2E;
+}
+
+.dark-mode .header {
+    background-color: #11111B;
+}
+
+.dark-mode #pomodoro-buttons button {
+    color: black;
+    background-color: #89DCEB;
+}
+
+.dark-mode #control-buttons button {
+    color: black;
+}
+
+.dark-mode #start-button {
+    background-color: #A6E3A1;
+}
+
+.dark-mode #stop-button {
+    background-color: #FAB387;
+}
+
+.dark-mode #reset-button {
+    background-color: #CBA6F7;
 }
