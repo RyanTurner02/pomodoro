@@ -66,6 +66,11 @@ body {
     padding-right: 5%;
 }
 
+#short-break-button {
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
 #control-buttons button {
     color: var(--ctp-latte-base);
     padding-top: 0.5%;
