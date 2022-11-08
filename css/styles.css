@@ -29,6 +29,7 @@ body {
 #mode-toggler {
     margin-left: 10px;
     border: none;
+    background-color: #FAFAFA;
 }
 
 .body {
@@ -107,7 +108,7 @@ button {
     background-color: #1E1E2E;
 }
 
-.dark-mode .header {
+.dark-mode .header, .dark-mode #mode-toggler {
     background-color: #11111B;
 }
 
