@@ -1,3 +1,5 @@
+@import url('https://unpkg.com/@catppuccin/palette@0.1.4/css/catppuccin.css');
+
 * {
     margin: 0;
     padding: 0;
@@ -5,12 +7,13 @@
 }
 
 body {
-    background-color: #EFF1F5;
+    color: var(--ctp-latte-text);
+    background-color: var(--ctp-latte-base);
 }
 
 .header {
     display: flex;
-    background-color: #FAFAFA;
+    background-color: var(--ctp-latte-crust);
     min-height: 100px;
     justify-content: space-evenly;
     align-items: center;
@@ -29,7 +32,7 @@ body {
 #mode-toggler {
     margin-left: 10px;
     border: none;
-    background-color: #FAFAFA;
+    background-color: var(--ctp-latte-crust);
 }
 
 .body {
@@ -55,8 +58,8 @@ body {
 }
 
 #pomodoro-buttons button {
-    color: #FAFAFA;
-    background-color: #04A5E5;
+    color: var(--ctp-latte-base);
+    background-color: var(--ctp-latte-blue);
     padding-top: 0.5%;
     padding-bottom: 0.5%;
     padding-left: 5%;
@@ -64,7 +67,7 @@ body {
 }
 
 #control-buttons button {
-    color: #FAFAFA;
+    color: var(--ctp-latte-base);
     padding-top: 0.5%;
     padding-bottom: 0.5%;
     padding-left: 2%;
@@ -82,15 +85,15 @@ body {
 }
 
 #start-button {
-    background-color: #40A02B;
+    background-color: var(--ctp-latte-green);
 }
 
 #stop-button {
-    background-color: #FE640B;
+    background-color: var(--ctp-latte-maroon);
 }
 
 #reset-button {
-    background-color: #8839EF;
+    background-color: var(--ctp-latte-teal);
 }
 
 #timer {
@@ -104,31 +107,31 @@ button {
 }
 
 .dark-mode {
-    color: #FAFAFA;
-    background-color: #1E1E2E;
+    color: var(--ctp-mocha-text);
+    background-color: var(--ctp-mocha-base);
 }
 
 .dark-mode .header, .dark-mode #mode-toggler {
-    background-color: #11111B;
+    background-color: var(--ctp-mocha-crust);
 }
 
 .dark-mode #pomodoro-buttons button {
-    color: black;
-    background-color: #89DCEB;
+    color: var(--ctp-latte-text);
+    background-color: var(--ctp-mocha-blue);
 }
 
 .dark-mode #control-buttons button {
-    color: black;
+    color: var(--ctp-latte-text);
 }
 
 .dark-mode #start-button {
-    background-color: #A6E3A1;
+    background-color: var(--ctp-mocha-green);
 }
 
 .dark-mode #stop-button {
-    background-color: #FAB387;
+    background-color: var(--ctp-frappe-maroon);
 }
 
 .dark-mode #reset-button {
-    background-color: #CBA6F7;
+    background-color: var(--ctp-mocha-teal);
 }
