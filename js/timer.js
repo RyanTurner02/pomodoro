@@ -13,7 +13,7 @@ let timer;
 
 let timerHasStarted = false;
 
-let finishedAlarm = new Audio("../audio/alarm_clock.ogg");
+let finishedAlarm = new Audio("audio/alarm_clock.ogg");
 
 function startButtonClicked() {
     if (seconds <= 0) {
